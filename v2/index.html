@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f9f9f9">
+  <meta name="description" content="毛天辰 Owen Mao，求职方向：AI 产品经理｜ToB Agent、企业知识应用、业务流程智能化。">
+  <title>毛天辰 Owen Mao · AI 产品经理</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fx.css">
+  <script>
+    // First home visit in this tab: keep the page hidden behind the opening cover until fx-intro.js runs.
+    (function () {
+      var seen = false;
+      try { seen = sessionStorage.getItem('owen-intro-seen') === '1'; } catch (e) {}
+      var onHome = !location.hash || location.hash === '#home';
+      if (onHome && !seen && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var html = document.documentElement;
+        html.classList.add('intro-armed');
+        window.__introFallback = setTimeout(function () { html.classList.remove('intro-armed'); }, 5000);
+      }
+    })();
+  </script>
+</head>
+<body>
+<div id="intro" class="intro" role="dialog" aria-modal="true" aria-labelledby="h-intro" tabindex="-1" hidden>
+  <div class="intro-stage">
+    <h1 id="h-intro" class="intro-sr" data-i18n="entry_title">你好，我是毛天辰</h1>
+    <p class="intro-line" aria-hidden="true">
+      <span class="intro-phrase intro-phrase--a"><i class="intro-bullet"></i><span data-i18n="greeting">你好</span></span>
+      <span class="intro-phrase intro-phrase--b"><i class="intro-bullet"></i><span data-i18n="entry_name">我是毛天辰</span></span>
+    </p>
+    <button class="intro-skip" type="button"><span data-i18n="enter">进入首页</span><span aria-hidden="true">↗</span></button>
+  </div>
+</div>
+<div id="frame" class="frame">
+  <a class="skip" href="#content"><span data-i18n="skip">跳至正文</span></a>
+  <aside id="rail" class="rail" aria-label="个人空间导航" data-i18n-aria="sidebar_label">
+    <div class="rail-top">
+      <a class="space-link" href="#home"><span data-i18n="space">个人空间</span></a>
+      <button id="rail-hide" class="ghost-btn" type="button" aria-controls="rail" aria-label="收起侧栏" data-i18n-aria="close_sidebar"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></button>
+    </div>
+    <nav class="rail-body" aria-label="个人空间栏目" data-i18n-aria="navigation">
+    <ul class="tree">
+      <li class="tree-item"><a class="node" href="#home" data-route="home"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-8h6v8"/></svg><span class="tree-text" data-i18n="nav_home">首页</span></a></li>
+      <li class="tree-item branch" data-group="projects" data-group-key="nav_projects">
+        <div class="branch-row"><a class="node" href="#projects" data-route="projects"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v10H3z"/></svg><span class="tree-text" data-i18n="nav_projects">项目</span></a><button class="branch-caret ghost-btn" type="button" aria-expanded="true" aria-controls="tree-projects" aria-label="收起项目分组"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 6 3 3 3-3"/></svg></button></div>
+        <ul id="tree-projects" class="leaves" role="group" aria-label="项目" data-i18n-aria="nav_projects">
+          <li><a class="leaf" href="#project-zeiss" data-route="project-zeiss" title="蔡司镜片｜质量知识问答 + 数据查询 Agent" data-i18n-title="page_zeiss"><span class="tree-text" data-i18n="page_zeiss">蔡司镜片｜质量知识问答 + 数据查询 Agent</span></a></li>
+          <li><a class="leaf" href="#project-marriott" data-route="project-marriott" title="万豪酒店｜采购平台规划与专家经验蒸馏 Agent" data-i18n-title="page_marriott"><span class="tree-text" data-i18n="page_marriott">万豪酒店｜采购平台规划与专家经验蒸馏 Agent</span></a></li>
+          <li><a class="leaf" href="#project-liauto" data-route="project-liauto" title="理想汽车｜出海 FOB 前端 Agent CRM" data-i18n-title="page_liauto"><span class="tree-text" data-i18n="page_liauto">理想汽车｜出海 FOB 前端 Agent CRM</span></a></li>
+          <li><a class="leaf" href="#project-jinsai" data-route="project-jinsai" title="金赛药业｜FDA 平台搭建（质量流程）" data-i18n-title="page_jinsai"><span class="tree-text" data-i18n="page_jinsai">金赛药业｜FDA 平台搭建（质量流程）</span></a></li>
+        </ul>
+      </li>
+      <li class="tree-item tree-item--gap"><a class="node" href="#works" data-route="works"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span class="tree-text" data-i18n="nav_works">个人作品</span></a></li>
+      <li class="tree-item branch" data-group="writing" data-group-key="nav_writing">
+        <div class="branch-row"><a class="node" href="#writing" data-route="writing"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span class="tree-text" data-i18n="nav_writing">文章</span></a><button class="branch-caret ghost-btn" type="button" aria-expanded="true" aria-controls="tree-writing" aria-label="收起文章分组"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 6 3 3 3-3"/></svg></button></div>
+        <ul id="tree-writing" class="leaves" role="group" aria-label="文章" data-i18n-aria="nav_writing">
+          <li><a class="leaf leaf--out" href="https://mp.weixin.qq.com/s/lopkJ7HxU7CTDR-qS7UCHw" target="_blank" rel="noopener noreferrer" title="一年150万封客服邮件，SAP Joule的生意到底卡在哪"><span class="tree-text" data-i18n="article_short_0">SAP Joule 的生意</span><span aria-hidden="true">↗</span></a></li>
+          <li><a class="leaf leaf--out" href="https://mp.weixin.qq.com/s/jgqUQpMmGF-Hjka1ovPmjA" target="_blank" rel="noopener noreferrer" title="4个月，3200个商机，Agentforce凭什么让人“回不去”"><span class="tree-text" data-i18n="article_short_1">Agentforce 的价值</span><span aria-hidden="true">↗</span></a></li>
+          <li><a class="leaf leaf--out" href="https://mp.weixin.qq.com/s/SVgkEku_R0JMXWYbQYLbFw" target="_blank" rel="noopener noreferrer" title="Jasper（原Javis）AI产品全生命周期拆解"><span class="tree-text" data-i18n="article_short_2">Jasper 全生命周期</span><span aria-hidden="true">↗</span></a></li>
+          <li><a class="leaf leaf--out" href="https://mp.weixin.qq.com/s/A50cFczj1fjIqdeiYQTPdg" target="_blank" rel="noopener noreferrer" title="说个暴论，现在被大厂轮番裁员的这部分岗位，其实早该被裁了"><span class="tree-text" data-i18n="article_short_3">先简化，再交给 AI</span><span aria-hidden="true">↗</span></a></li>
+          <li><a class="leaf leaf--out" href="https://mp.weixin.qq.com/s/QzwzoOXgiPdfJAWhGWdi3w" target="_blank" rel="noopener noreferrer" title="AI都来了，企业的技术平台还有用吗？"><span class="tree-text" data-i18n="article_short_4">企业技术平台与 AI</span><span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </li>
+      <li class="tree-item tree-item--split"><a class="node" href="#tools" data-route="tools"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M10 10h4v4h-4z"/></svg><span class="tree-text" data-i18n="nav_tools">AI 工具</span></a></li>
+      <li class="tree-item"><a class="node" href="#about" data-route="about"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span class="tree-text" data-i18n="nav_about">关于我</span></a></li>
+      <li class="tree-item"><a class="node" href="#contact" data-route="contact"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg><span class="tree-text" data-i18n="nav_contact">联系与关注</span></a></li>
+    </ul>
+    </nav>
+    <footer class="rail-foot">
+      <a class="me" href="#about"><img src="assets/avatar-g3b-transparent.webp" width="34" height="34" alt="毛天辰 Owen Mao"><span class="me-text"><strong data-i18n="profile_name">毛天辰 Owen Mao</strong><small data-i18n="profile_role">技术与转型顾问兼项目经理</small></span></a>
+    </footer>
+  </aside>
+  <button id="rail-veil" class="veil" type="button" aria-label="收起侧栏" data-i18n-aria="close_sidebar" tabindex="-1" hidden></button>
+  <div class="desk">
+    <div class="sky" data-fx-sky aria-hidden="true"></div>
+    <header class="topbar">
+      <button id="rail-show" class="ghost-btn" type="button" aria-label="展开侧栏" data-i18n-aria="open_sidebar" aria-expanded="false" aria-controls="rail"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <ol class="crumbs">
+        <li class="crumb crumb--root"><span data-i18n="space">个人空间</span></li>
+        <li class="crumb crumb--here"><span id="crumb-here">首页</span></li>
+      </ol>
+      <div class="topbar-tools">
+        <div class="lang-switch" role="group" aria-label="语言" data-i18n-aria="lang_label"><button type="button" data-lang="zh" aria-pressed="true" lang="zh-CN" aria-label="中文">中</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="false" lang="en" aria-label="English">EN</button></div>
+        <button id="replay-intro" class="ghost-btn ghost-btn--soft" type="button" aria-label="重播开场" data-i18n-aria="replay" title="重播开场" data-i18n-title="replay"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10a8 8 0 1 1 2 8M4 4v6h6"/></svg></button>
+        <a class="topbar-contact" href="#contact"><span data-i18n="nav_contact">联系与关注</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+    <main id="content" class="viewport" tabindex="-1">
+<section class="view view--home" id="home" data-page data-title-key="nav_home" data-motion="rise" aria-labelledby="h-home">
+<div class="hello">
+<header class="hello-head">
+<div class="hello-text">
+<p data-i18n="greeting" class="kicker">你好</p>
+<h1 data-i18n="hero_name" id="h-home" tabindex="-1">我是毛天辰 Owen Mao</h1>
+<p data-i18n="home_role" class="hello-role">求职方向：AI 产品经理｜ToB Agent、企业知识应用、业务流程智能化</p>
+<p data-i18n="home_intro" class="hello-lede">我习惯先把业务问题拆到流程、字段和规则这一层，再决定哪些交给模型、哪些交给规则和受控接口。</p>
+</div><img class="hello-photo" src="assets/avatar-g3b-transparent.webp" width="800" height="1000" alt="毛天辰 Owen Mao" fetchpriority="high" decoding="async">
+</header>
+<div class="hello-actions"><a class="pill" href="#projects"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v10H3z"/></svg><span data-i18n="quick_projects">看看我的项目</span></a><a class="pill" href="#writing"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span data-i18n="quick_writing">读读我的文章</span></a><a class="pill" href="#about"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span data-i18n="quick_about">多了解我一点</span></a>
+</div>
+<div class="elsewhere"><p class="elsewhere-label" data-i18n="find_me">也可以在这些地方找到我</p>
+<div class="elsewhere-links"><a class="elsewhere-btn" href="https://github.com/owenmao-builder" target="_blank" rel="noopener noreferrer"><svg class="brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 20c-4.5 1.4-4.5-2.5-6.3-3M15 22v-3.9c0-1.1.2-1.8-.5-2.5 3.2-.3 6.5-1.5 6.5-7.1A5.5 5.5 0 0 0 19.5 4c.2-.6.7-2.2-.2-4 0 0-1.2-.4-4 1.5a13.7 13.7 0 0 0-7 0C5.5-.4 4.3 0 4.3 0c-.9 1.8-.4 3.4-.2 4A5.5 5.5 0 0 0 2.6 8.5c0 5.6 3.3 6.8 6.5 7.1-.6.5-.9 1.3-.9 2.3V22" transform="translate(1 1) scale(.9)"/></svg><span>GitHub</span></a><button class="elsewhere-btn" type="button" data-qr aria-haspopup="dialog" aria-controls="qr-card" aria-label="查看公众号二维码" data-i18n-aria="qr_open"><svg class="brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.5 12.5a6.5 6.5 0 0 0 .6-2.7C16.1 6 12.9 3 9 3S2 6 2 9.8c0 2.1 1.1 4.1 2.8 5.4L4 18l3.2-1.4a8.2 8.2 0 0 0 2.2.2"/><path d="M22 15.1c0-2.8-2.6-5.1-5.8-5.1s-5.8 2.3-5.8 5.1 2.6 5.1 5.8 5.1l1.9-.2 2.5 1-.6-2.1c1.3-1 2-2.4 2-3.8z"/><path d="M6.5 8h.1M11.5 8h.1M14 14.5h.1M18.5 14.5h.1" stroke-width="2.5"/></svg><span data-i18n="wechat_link">公众号 · OM创意工坊</span></button><a class="elsewhere-btn" href="mailto:owenmao24@gmail.com"><svg class="brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span data-i18n="email">邮箱</span></a>
+</div>
+</div>
+</div>
+</section>
+<section class="view view--read" id="projects" data-page data-title-key="nav_projects" data-motion="stagger" aria-labelledby="h-projects" hidden>
+<div class="view-head">
+<p data-i18n="profile_name" class="kicker">毛天辰 Owen Mao</p>
+<h1 data-i18n="projectsTitle" id="h-projects" tabindex="-1">项目案例</h1>
+<p class="view-lede" data-i18n="methodDesc0">把一线业务问题拆到流程、字段和规则这一层。</p>
+</div>
+<div class="tiles">
+<a class="tile" href="#project-zeiss">
+<div class="tile-meta"><span data-i18n="zeiss_client">蔡司镜片</span><span>2025.01–2026.06</span>
+</div>
+<h2 data-i18n="zeiss_title">质量知识问答 + 数据查询 Agent</h2>
+<p data-i18n="zeiss_problem">质量资料散在作业指导书、字段字典、月报、8D 案例里，新旧版本并存；检验批状态、不合格统计要依赖 IT 或关键用户查询。</p>
+<p class="tile-note" data-i18n="demoNotice">Demo 为基于项目场景自建的演示原型，数据为示例</p>
+<div class="tile-foot"><span data-i18n="zeiss_industry">光学镜片</span><span data-i18n="details">查看介绍 →</span>
+</div></a>
+<a class="tile" href="#project-marriott">
+<div class="tile-meta"><span data-i18n="marriott_client">万豪酒店</span><span>2026.06–2026.10</span>
+</div>
+<h2 data-i18n="marriott_title">采购平台规划与专家经验蒸馏 Agent</h2>
+<p data-i18n="marriott_problem">资深顾问陆续退休，品类策略、供应商评估和方案取舍的判断随人离开而流失；新人形成合格方案初稿周期长、返工多。</p>
+<p class="tile-note" data-i18n="demoNotice">Demo 为基于项目场景自建的演示原型，数据为示例</p>
+<div class="tile-foot"><span data-i18n="marriott_industry">酒店</span><span data-i18n="details">查看介绍 →</span>
+</div></a>
+<a class="tile" href="#project-liauto">
+<div class="tile-meta"><span data-i18n="liauto_client">理想汽车</span><span>2024.07–2025.01</span>
+</div>
+<h2 data-i18n="liauto_title">出海 FOB 前端 Agent CRM</h2>
+<p data-i18n="liauto_problem">海外经销商和出海业务人员查车型/备件可用量、在途库存和清关状态，要在多个系统间切换或找内勤，响应慢且口径不一。</p>
+<p class="tile-note" data-i18n="demoNotice">Demo 为基于项目场景自建的演示原型，数据为示例</p>
+<div class="tile-foot"><span data-i18n="liauto_industry">汽车</span><span data-i18n="details">查看介绍 →</span>
+</div></a>
+<a class="tile" href="#project-jinsai">
+<div class="tile-meta"><span data-i18n="jinsai_client">金赛药业</span><span>2023.07–2024.01</span>
+</div>
+<h2 data-i18n="jinsai_title">FDA 平台搭建（质量流程）</h2>
+<p data-i18n="jinsai_problem">生物制药客户需要搭建符合 FDA 要求的平台，规划质量部门流程并在系统中落地。</p>
+<p class="tile-note" data-i18n="demoNotice">Demo 为基于项目场景自建的演示原型，数据为示例</p>
+<div class="tile-foot"><span data-i18n="jinsai_industry">生物制药</span><span data-i18n="details">查看介绍 →</span>
+</div></a>
+</div>
+</section>
+<section class="view view--read" id="project-zeiss" data-page data-title-key="page_zeiss" data-motion="rise" aria-labelledby="h-project-zeiss" hidden>
+<div class="view-head">
+<p data-i18n="projectsTitle" class="kicker">项目案例</p>
+<h1 data-i18n="page_zeiss" id="h-project-zeiss" tabindex="-1">蔡司镜片｜质量知识问答 + 数据查询 Agent</h1>
+</div>
+<dl class="facts">
+<div><dt data-i18n="client_industry">客户 / 行业</dt><dd><span data-i18n="zeiss_client">蔡司镜片</span> / <span data-i18n="zeiss_industry">光学镜片</span></dd>
+</div>
+<div><dt data-i18n="my_role">我的角色</dt><dd><span data-i18n="zeiss_role">系统切换项目经理助理、质量流程与数据治理顾问</span></dd>
+</div>
+<div><dt data-i18n="period">时间</dt><dd>2025.01–2026.06</dd>
+</div></dl>
+<div class="callout callout--demo">
+<div class="demo-row"><a class="btn" href="demos/zeiss/index.html" target="_blank" rel="noopener noreferrer" aria-describedby="zeiss-notice"><span data-i18n="demo">看交互 Demo ↗</span></a><span data-i18n="sample" class="sample-tag">演示用示例数据</span>
+</div>
+<p data-i18n="demoNotice" id="zeiss-notice">Demo 为基于项目场景自建的演示原型，数据为示例</p>
+</div>
+<div class="body-copy">
+<h2 data-i18n="problem">问题</h2>
+<p data-i18n="zeiss_problem" data-content="problem">质量资料散在作业指导书、字段字典、月报、8D 案例里，新旧版本并存；检验批状态、不合格统计要依赖 IT 或关键用户查询。</p>
+<h2 data-i18n="approach">做法</h2>
+<p data-i18n="zeiss_approach" data-content="approach">借 SAP 升级做质量知识治理，给文档补齐版本、状态、生效日期、适用工厂、责任人元数据；问题分为规则定义类（走文档 RAG，附来源和版本）与统计状态类（走数据查询 Agent，受控接口，返回数据时间和口径）；无有效依据时拒答并给出责任人；建评测集，Bad Case 按理解、检索、生成、工具、权限与数据逐层归因。</p>
+<h2 data-i18n="outcome">结果（定性）</h2>
+<p data-i18n="zeiss_outcome" data-content="outcome">修复了新旧两版作业指导书同时召回导致混入废止规则的问题（补齐元数据 + 硬过滤现行状态）；先在质量部关键用户中试点，反馈进入 Bad Case 池定期复盘。</p>
+</div><a class="inline-link" href="#projects"><span data-i18n="all_projects">← 全部项目</span></a>
+</section>
+<section class="view view--read" id="project-marriott" data-page data-title-key="page_marriott" data-motion="rise" aria-labelledby="h-project-marriott" hidden>
+<div class="view-head">
+<p data-i18n="projectsTitle" class="kicker">项目案例</p>
+<h1 data-i18n="page_marriott" id="h-project-marriott" tabindex="-1">万豪酒店｜采购平台规划与专家经验蒸馏 Agent</h1>
+</div>
+<dl class="facts">
+<div><dt data-i18n="client_industry">客户 / 行业</dt><dd><span data-i18n="marriott_client">万豪酒店</span> / <span data-i18n="marriott_industry">酒店</span></dd>
+</div>
+<div><dt data-i18n="my_role">我的角色</dt><dd><span data-i18n="marriott_role">项目经理</span></dd>
+</div>
+<div><dt data-i18n="period">时间</dt><dd>2026.06–2026.10</dd>
+</div></dl>
+<div class="callout callout--demo">
+<div class="demo-row"><a class="btn" href="demos/marriott/index.html" target="_blank" rel="noopener noreferrer" aria-describedby="marriott-notice"><span data-i18n="demo">看交互 Demo ↗</span></a><span data-i18n="sample" class="sample-tag">演示用示例数据</span>
+</div>
+<p data-i18n="demoNotice" id="marriott-notice">Demo 为基于项目场景自建的演示原型，数据为示例</p>
+</div>
+<div class="body-copy">
+<h2 data-i18n="problem">问题</h2>
+<p data-i18n="marriott_problem" data-content="problem">资深顾问陆续退休，品类策略、供应商评估和方案取舍的判断随人离开而流失；新人形成合格方案初稿周期长、返工多。</p>
+<h2 data-i18n="approach">做法</h2>
+<p data-i18n="marriott_approach" data-content="approach">七要素结构化访谈（背景、约束、备选方案、选择理由、被否掉的路线、后果、反例）→ 模型抽取案例草稿、顾问逐条校对 → 按品类、场景、客户规模、适用条件打元数据整案召回 → 生成初稿并逐条标注依据案例、关键假设和未决项 → 专家审核，修改原因回写案例库。</p>
+<h2 data-i18n="outcome">结果（定性）</h2>
+<p data-i18n="marriott_outcome" data-content="outcome">制定初稿验收标准，达到专家认可标准的初稿才进入交付流程；先在项目组内试点。</p>
+</div><a class="inline-link" href="#projects"><span data-i18n="all_projects">← 全部项目</span></a>
+</section>
+<section class="view view--read" id="project-liauto" data-page data-title-key="page_liauto" data-motion="rise" aria-labelledby="h-project-liauto" hidden>
+<div class="view-head">
+<p data-i18n="projectsTitle" class="kicker">项目案例</p>
+<h1 data-i18n="page_liauto" id="h-project-liauto" tabindex="-1">理想汽车｜出海 FOB 前端 Agent CRM</h1>
+</div>
+<dl class="facts">
+<div><dt data-i18n="client_industry">客户 / 行业</dt><dd><span data-i18n="liauto_client">理想汽车</span> / <span data-i18n="liauto_industry">汽车</span></dd>
+</div>
+<div><dt data-i18n="my_role">我的角色</dt><dd><span data-i18n="liauto_role">流程规划与 CRM 方案顾问</span></dd>
+</div>
+<div><dt data-i18n="period">时间</dt><dd>2024.07–2025.01</dd>
+</div></dl>
+<div class="callout callout--demo">
+<div class="demo-row"><a class="btn" href="demos/liauto/index.html" target="_blank" rel="noopener noreferrer" aria-describedby="liauto-notice"><span data-i18n="demo">看交互 Demo ↗</span></a><span data-i18n="sample" class="sample-tag">演示用示例数据</span>
+</div>
+<p data-i18n="demoNotice" id="liauto-notice">Demo 为基于项目场景自建的演示原型，数据为示例</p>
+</div>
+<div class="body-copy">
+<h2 data-i18n="problem">问题</h2>
+<p data-i18n="liauto_problem" data-content="problem">海外经销商和出海业务人员查车型/备件可用量、在途库存和清关状态，要在多个系统间切换或找内勤，响应慢且口径不一。</p>
+<h2 data-i18n="approach">做法</h2>
+<p data-i18n="liauto_approach" data-content="approach">在前端 CRM 上搭建库存查询 Agent：抽取物料、仓库、时间参数，缺参追问；校验权限后调用库存服务；数量和交期交给规则引擎与库存服务，模型不自行推算；只读，写操作一律转人工。</p>
+<h2 data-i18n="outcome">结果（定性）</h2>
+<p data-i18n="liauto_outcome" data-content="outcome">以参数与结果正确率、追问是否恰当、越权拒答、端到端成功率建立评测用例，试点收集失败原因迭代。</p>
+</div><a class="inline-link" href="#projects"><span data-i18n="all_projects">← 全部项目</span></a>
+</section>
+<section class="view view--read" id="project-jinsai" data-page data-title-key="page_jinsai" data-motion="rise" aria-labelledby="h-project-jinsai" hidden>
+<div class="view-head">
+<p data-i18n="projectsTitle" class="kicker">项目案例</p>
+<h1 data-i18n="page_jinsai" id="h-project-jinsai" tabindex="-1">金赛药业｜FDA 平台搭建（质量流程）</h1>
+</div>
+<dl class="facts">
+<div><dt data-i18n="client_industry">客户 / 行业</dt><dd><span data-i18n="jinsai_client">金赛药业</span> / <span data-i18n="jinsai_industry">生物制药</span></dd>
+</div>
+<div><dt data-i18n="my_role">我的角色</dt><dd><span data-i18n="jinsai_role">项目经理助理、质量模块方案及实施顾问</span></dd>
+</div>
+<div><dt data-i18n="period">时间</dt><dd>2023.07–2024.01</dd>
+</div></dl>
+<div class="callout callout--demo">
+<div class="demo-row"><a class="btn" href="demos/jinsai/index.html" target="_blank" rel="noopener noreferrer" aria-describedby="jinsai-notice"><span data-i18n="demo">看交互 Demo ↗</span></a><span data-i18n="sample" class="sample-tag">演示用示例数据</span>
+</div>
+<p data-i18n="demoNotice" id="jinsai-notice">Demo 为基于项目场景自建的演示原型，数据为示例</p>
+</div>
+<div class="body-copy">
+<h2 data-i18n="problem">问题</h2>
+<p data-i18n="jinsai_problem" data-content="problem">生物制药客户需要搭建符合 FDA 要求的平台，规划质量部门流程并在系统中落地。</p>
+<h2 data-i18n="approach">做法</h2>
+<p data-i18n="jinsai_approach" data-content="approach">参与制定项目主计划，跟踪进度与风险；完成业务调研、质量流程规划、系统配置、测试与落地实施。以实习生身份入项，转正后负责至项目收尾。</p>
+<h2 data-i18n="outcome">结果（定性）</h2>
+<p data-i18n="jinsai_outcome" data-content="outcome">完成从调研到落地的全链路交付（Demo 为通用 FDA/GMP 质量流程示意）。</p>
+</div><a class="inline-link" href="#projects"><span data-i18n="all_projects">← 全部项目</span></a>
+</section>
+<section class="view view--read" id="works" data-page data-title-key="nav_works" data-motion="stagger" aria-labelledby="h-works" hidden>
+<div class="view-head">
+<p data-i18n="nav_works" class="kicker">个人作品</p>
+<h1 data-i18n="productsTitle" id="h-works" tabindex="-1">我做的产品</h1>
+<p class="view-lede" data-i18n="tagline">保持好奇，创造下一种可能。</p>
+</div>
+<div class="tiles tiles--works">
+<article class="tile tile--work">
+<h2 data-i18n="work_title_0">同好会｜线上匹配运动平台</h2>
+<p data-i18n="work_desc_0">通过兴趣标签匹配和场馆合作，让用户简单交互就能约到运动。</p>
+<div class="tile-foot tile-links"><a class="inline-link" href="https://tonghao-club-demo.owenmao24.chatgpt.site/" target="_blank" rel="noopener noreferrer"><span data-i18n="visit">打开产品 ↗</span></a><a class="inline-link" href="https://github.com/owenmao-builder/SportMates-Matchup-Platform" target="_blank" rel="noopener noreferrer"><span data-i18n="source">开源 ↗</span></a>
+</div>
+</article>
+<article class="tile tile--work">
+<h2 data-i18n="work_title_1">Love Language｜情绪翻译器</h2>
+<p data-i18n="work_desc_1">拨开负面情绪的外衣，听见伴侣、家人、朋友的善意，也复盘自己语言里的刺。</p>
+<div class="tile-foot tile-links"><a class="inline-link" href="https://love-language-little-shelter.owenmao24.chatgpt.site" target="_blank" rel="noopener noreferrer"><span data-i18n="visit">打开产品 ↗</span></a>
+</div>
+</article>
+<article class="tile tile--work">
+<h2 data-i18n="work_title_2">AI Product Frontier｜AI 行业情报聚合器</h2>
+<p data-i18n="work_desc_2">按新颖性、影响力、解释价值和决策相关性筛选 AI 技术与产品动态，在 macOS 菜单栏展示要点。</p>
+<div class="tile-foot tile-links"><a class="inline-link" href="https://github.com/owenmao-builder/ai-product-frontier-resource-aggregator" target="_blank" rel="noopener noreferrer"><span data-i18n="source">开源 ↗</span></a>
+</div>
+</article>
+<article class="tile tile--work">
+<h2 data-i18n="work_title_3">F1 Racecraft</h2>
+<p data-i18n="work_desc_3">赛事复盘、车手数据、可视化换胎策略实验室与三维攻防演示。</p>
+<div class="tile-foot tile-links"><a class="inline-link" href="https://owenmao-builder.github.io/f1-racecraft/" target="_blank" rel="noopener noreferrer"><span data-i18n="visit">打开产品 ↗</span></a>
+</div>
+</article>
+<article class="tile tile--work">
+<h2 data-i18n="work_title_4">费用会审室</h2>
+<p data-i18n="work_desc_4">四个角色用证据修正经营解释的交互 Demo，支持确定性计算、补证、复核与结论卡。</p>
+<div class="tile-foot tile-links"><a class="inline-link" href="https://owenmao-builder.github.io/expense-hearing/" target="_blank" rel="noopener noreferrer"><span data-i18n="visit">打开产品 ↗</span></a>
+</div>
+</article>
+<article class="tile tile--work">
+<h2 data-i18n="work_title_5">造境 ZAO</h2>
+<p data-i18n="work_desc_5">AIGC 创作工作台在线体验站。</p>
+<div class="tile-foot tile-links"><a class="inline-link" href="https://owenmao-builder.github.io/zao-studio-site/" target="_blank" rel="noopener noreferrer"><span data-i18n="visit">打开产品 ↗</span></a>
+</div>
+</article>
+<article class="tile tile--work">
+<h2 data-i18n="work_title_6">Starter Studio</h2>
+<p data-i18n="work_desc_6">PRD 驱动的分步开发工作室，含需求确认、技术方案与代码书签。</p>
+<div class="tile-foot tile-links"><a class="inline-link" href="https://owenmao-builder.github.io/starter-studio/" target="_blank" rel="noopener noreferrer"><span data-i18n="visit">打开产品 ↗</span></a>
+</div>
+</article>
+</div>
+</section>
+<section class="view view--read" id="writing" data-page data-title-key="nav_writing" data-motion="stagger" aria-labelledby="h-writing" hidden>
+<div class="view-head">
+<p data-i18n="wechat_link" class="kicker">公众号 · OM创意工坊</p>
+<h1 data-i18n="articlesTitle" id="h-writing" tabindex="-1">公众号精选文章</h1>
+<p class="view-lede" data-i18n="focus">ToB Agent、企业知识应用、业务流程智能化</p>
+</div>
+<div class="posts"><a class="post" href="https://mp.weixin.qq.com/s/lopkJ7HxU7CTDR-qS7UCHw" target="_blank" rel="noopener noreferrer">
+<div class="tile-meta"><span>OM创意工坊</span><time datetime="2026-09-07">2026-09-07</time>
+</div>
+<h2 lang="zh-CN">一年150万封客服邮件，SAP Joule的生意到底卡在哪</h2>
+<p data-i18n="article_desc_0">从博世的工单分流、人事自助和财务流程切入，对比 SAP Joule 与 Agentforce 的业务价值，分析省下工时为何未必带来持续付费。</p>
+<div class="tile-foot"><span data-i18n="read_original">阅读原文 ↗</span>
+</div></a>
+<a class="post" href="https://mp.weixin.qq.com/s/jgqUQpMmGF-Hjka1ovPmjA" target="_blank" rel="noopener noreferrer">
+<div class="tile-meta"><span>OM创意工坊</span><time datetime="2026-09-05">2026-09-05</time>
+</div>
+<h2 lang="zh-CN">4个月，3200个商机，Agentforce凭什么让人“回不去”</h2>
+<p data-i18n="article_desc_1">从 Salesforce、销售易和客户案例出发，拆解 Agent 如何参与线索跟进、CRM 录入与客户协作。</p>
+<div class="tile-foot"><span data-i18n="read_original">阅读原文 ↗</span>
+</div></a>
+<a class="post" href="https://mp.weixin.qq.com/s/SVgkEku_R0JMXWYbQYLbFw" target="_blank" rel="noopener noreferrer">
+<div class="tile-meta"><span>OM创意工坊</span><time datetime="2026-08-31">2026-08-31</time>
+</div>
+<h2 lang="zh-CN">Jasper（原Javis）AI产品全生命周期拆解</h2>
+<p data-i18n="article_desc_2">回顾 Jasper 的产品迭代、增长方式与收费变化，探讨模型能力普及后，AI 应用凭什么让客户持续付费。</p>
+<div class="tile-foot"><span data-i18n="read_original">阅读原文 ↗</span>
+</div></a>
+<a class="post" href="https://mp.weixin.qq.com/s/A50cFczj1fjIqdeiYQTPdg" target="_blank" rel="noopener noreferrer">
+<div class="tile-meta"><span>OM创意工坊</span><time datetime="2026-08-30">2026-08-30</time>
+</div>
+<h2 lang="zh-CN">说个暴论，现在被大厂轮番裁员的这部分岗位，其实早该被裁了</h2>
+<p data-i18n="article_desc_3">引入 AI 前先质疑、删除和简化无效动作，再让 Agent 接手有价值的任务。</p>
+<div class="tile-foot"><span data-i18n="read_original">阅读原文 ↗</span>
+</div></a>
+<a class="post" href="https://mp.weixin.qq.com/s/QzwzoOXgiPdfJAWhGWdi3w" target="_blank" rel="noopener noreferrer">
+<div class="tile-meta"><span>OM创意工坊</span><time datetime="2026-08-29">2026-08-29</time>
+</div>
+<h2 lang="zh-CN">AI都来了，企业的技术平台还有用吗？</h2>
+<p data-i18n="article_desc_4">企业技术平台如何转变为 AI 的上下文与工具入口，以及人的判断、责任与信任。</p>
+<div class="tile-foot"><span data-i18n="read_original">阅读原文 ↗</span>
+</div></a>
+</div>
+</section>
+<section class="view view--read" id="tools" data-page data-title-key="nav_tools" data-motion="stagger" aria-labelledby="h-tools" hidden>
+<div class="view-head">
+<p data-i18n="profile_name" class="kicker">毛天辰 Owen Mao</p>
+<h1 data-i18n="toolsTitle" id="h-tools" tabindex="-1">常用 AI 工具</h1>
+</div>
+<div class="tiles">
+<article class="tile">
+<h2>Dify</h2>
+<p data-i18n="toolDify">搭 RAG 知识库、工作流与 Agent 原型</p>
+</article>
+<article class="tile">
+<h2>Codex</h2>
+<p data-i18n="toolCodex">AI 原生开发，把想法做成可点开的产品和 Demo</p>
+</article>
+<div class="tile tbd-box" id="other-tools-placeholder">
+<h2 data-i18n="otherTools">其他工具</h2>
+<p data-i18n="pending">待 Owen 提供</p>
+</div>
+</div>
+</section>
+<section class="view view--read" id="about" data-page data-title-key="nav_about" data-motion="focus" aria-labelledby="h-about" hidden>
+<div class="view-head">
+<p data-i18n="profile_name" class="kicker">毛天辰 Owen Mao</p>
+<h1 data-i18n="aboutTitle" id="h-about" tabindex="-1">关于我</h1>
+</div>
+<div class="bio"><img src="assets/avatar-g3b-transparent.webp" width="800" height="1000" alt="毛天辰 Owen Mao" decoding="async">
+<div>
+<h2 data-i18n="tagline">保持好奇，创造下一种可能。</h2>
+<p data-i18n="intro">在德勤技术与转型团队做顾问和项目经理，从富士康的仓储系统、金赛药业的质量流程，一路做到蔡司的质量知识问答和数据查询 Agent、万豪的专家经验蒸馏 Agent。我习惯先把业务问题拆到流程、字段和规则这一层，再决定哪些交给模型、哪些交给规则和受控接口。现在想专注做 ToB 的 AI 产品：企业知识应用、Agent 和业务流程智能化。</p>
+</div>
+</div>
+<div class="body-copy">
+<h2 data-i18n="methodTitle">我怎么做产品</h2><ol class="steps"><li>
+<h3 data-i18n="method0">懂行业、懂流程</h3>
+<p data-i18n="methodDesc0">把一线业务问题拆到流程、字段和规则这一层。</p></li><li>
+<h3 data-i18n="method1">分清模型和规则的边界</h3>
+<p data-i18n="methodDesc1">模型负责理解表达、组织答案；数量计算、指标口径和业务承诺交给规则引擎与受控接口。流程固定的任务先用工作流，需要复杂决策再引入 Agent。</p></li><li>
+<h3 data-i18n="method2">数据是企业 AI 的地基</h3>
+<p data-i18n="methodDesc2">数据对象、口径、版本和责任人没理清，检索和查询一定会答错。</p></li><li>
+<h3 data-i18n="method3">从方案走到实施</h3>
+<p data-i18n="methodDesc3">调研、流程规划、功能设计、开发对接、测试、上线和推广培训。</p></li></ol>
+<h2 data-i18n="experience">经历</h2>
+<div class="history">
+<div class="history-item">
+<p class="history-when">2023.12–2026.10</p>
+<div>
+<h3 data-i18n="expTitle0">德勤企业管理咨询</h3>
+<p data-i18n="expRole0">技术与转型顾问兼项目经理</p>
+</div>
+</div>
+<div class="history-item">
+<p class="history-when">2022.12–2023.12</p>
+<div>
+<h3 data-i18n="expTitle1">德勤企业管理咨询</h3>
+<p data-i18n="expRole1">技术与转型实习生</p>
+</div>
+</div>
+</div>
+<h2 data-i18n="education">教育</h2>
+<div class="history-item">
+<p class="history-when">2019.10–2023.06</p>
+<div>
+<h3 data-i18n="expTitle2">上海对外经贸大学</h3>
+<p data-i18n="expRole2">会计学｜本科</p>
+</div>
+</div>
+<h2 data-i18n="service">服务过的行业与客户</h2>
+<div class="tags"><span data-i18n="industry0" class="tag">电子制造</span><span data-i18n="industry1" class="tag">生物制药</span><span data-i18n="industry2" class="tag">汽车</span><span data-i18n="industry3" class="tag">光学镜片</span><span data-i18n="industry4" class="tag">酒店</span>
+</div>
+<p data-i18n="clients" class="client-line">富士康 · 金赛药业 · 东风汽车 · 理想汽车 · 蔡司 · 万豪</p>
+</div><a class="inline-link" href="#contact"><span data-i18n="nav_contact">联系与关注</span> <span aria-hidden="true">→</span></a>
+</section>
+<section class="view view--read" id="contact" data-page data-title-key="nav_contact" data-motion="stagger" aria-labelledby="h-contact" hidden>
+<div class="view-head">
+<p data-i18n="profile_name" class="kicker">毛天辰 Owen Mao</p>
+<h1 data-i18n="nav_contact" id="h-contact" tabindex="-1">联系与关注</h1>
+<p class="view-lede" data-i18n="find_me">也可以在这些地方找到我</p>
+</div>
+<div class="channels">
+<a class="channel channel--link" href="https://github.com/owenmao-builder" target="_blank" rel="noopener noreferrer">
+<div>
+<h2>GitHub</h2>
+<p>owenmao-builder</p>
+</div><span data-i18n="visit_home" class="channel-cta">访问主页 ↗</span></a>
+<div class="channel">
+<div>
+<h2 data-i18n="email">邮箱</h2>
+<p><a class="mail-addr" href="mailto:owenmao24@gmail.com">owenmao24@gmail.com</a>
+</p>
+<p class="copy-msg" role="status" aria-live="polite" aria-atomic="true">
+</p>
+</div><button type="button" class="btn" data-copy><span data-i18n="copy">复制邮箱</span></button>
+</div>
+<div class="channel channel--wechat">
+<div>
+<p data-i18n="officialWechat" class="channel-kicker">微信公众号</p>
+<h2>OM创意工坊</h2>
+<p data-i18n="scan" class="channel-hint">微信扫一扫，关注 OM创意工坊</p><a class="inline-link" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzY4NTQyNzczNw==&amp;scene=124#wechat_redirect" target="_blank" rel="noopener noreferrer"><span data-i18n="wechatHome">打开公众号主页 ↗</span></a>
+</div><button class="qr-btn" type="button" data-qr aria-haspopup="dialog" aria-controls="qr-card" aria-label="查看公众号二维码" data-i18n-aria="qr_open"><img src="assets/qr-om-gongzhonghao.svg" width="215" height="215" alt="OM创意工坊公众号二维码" data-i18n-alt="officialQrAlt" decoding="async"></button>
+</div>
+<div class="channel tbd-box" id="personal-wechat-placeholder">
+<div>
+<h2 data-i18n="personalWechat">个人微信二维码</h2>
+<p data-i18n="pending">待 Owen 提供</p>
+</div><img class="tbd-qr" src="assets/wechat-qr-placeholder.svg" width="160" height="160" alt="个人微信二维码占位：待 Owen 提供" data-i18n-alt="placeholderAlt">
+</div>
+</div>
+</section>
+    </main>
+  </div>
+</div>
+<div id="qr-layer" class="qr-layer" hidden>
+<div class="qr-dim" data-close-qr>
+</div>
+<section id="qr-card" class="qr-card" role="dialog" aria-modal="true" aria-labelledby="h-qr" tabindex="-1">
+<div class="qr-card-top">
+<p data-i18n="officialWechat" class="kicker">微信公众号</p><button class="ghost-btn" type="button" data-close-qr aria-label="关闭" data-i18n-aria="close"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
+</div>
+<h2 id="h-qr">OM创意工坊</h2>
+<div class="qr-frame"><img src="assets/qr-om-gongzhonghao.svg" width="260" height="260" alt="OM创意工坊公众号二维码" data-i18n-alt="officialQrAlt">
+</div>
+<p data-i18n="scan">微信扫一扫，关注 OM创意工坊</p><a class="inline-link" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzY4NTQyNzczNw==&amp;scene=124#wechat_redirect" target="_blank" rel="noopener noreferrer"><span data-i18n="wechatHome">打开公众号主页 ↗</span></a>
+</section>
+</div>
+<script src="fx-sky.js"></script>
+<script src="fx-intro.js"></script>
+<script src="fx-reveal.js"></script>
+<script src="fx-flip.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
