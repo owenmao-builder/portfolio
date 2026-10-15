@@ -62,8 +62,8 @@ const dictionary = {
     "en": "Client / industry"
   },
   "clients": {
-    "zh": "富士康 · 金赛药业 · 东风汽车 · 理想汽车 · 蔡司 · 万豪",
-    "en": "Foxconn · Jinsai Pharma · Dongfeng Motor · Li Auto · ZEISS · Marriott"
+    "zh": "富士康 · 金赛药业 · 东风汽车 · 蔡司 · 万豪",
+    "en": "Foxconn · Jinsai Pharma · Dongfeng Motor · ZEISS · Marriott"
   },
   "close": {
     "zh": "关闭",
@@ -122,8 +122,8 @@ const dictionary = {
     "en": "Hello, I'm Owen Mao"
   },
   "expRole0": {
-    "zh": "技术与转型顾问兼项目经理",
-    "en": "Technology & Transformation Consultant and Project Manager"
+    "zh": "AI 产品负责人 / 项目经理 / 技术转型顾问",
+    "en": "AI Product Lead / Project Manager / Technology Transformation Consultant"
   },
   "expRole1": {
     "zh": "技术与转型实习生",
@@ -178,8 +178,8 @@ const dictionary = {
     "en": "I start by breaking business problems down into processes, fields and rules, then decide what to hand over to models, rules and controlled interfaces."
   },
   "home_role": {
-    "zh": "求职方向：AI 产品经理｜ToB Agent、企业知识应用、业务流程智能化",
-    "en": "Seeking an AI Product Manager role | ToB Agents, enterprise knowledge applications & intelligent business processes"
+    "zh": "AI产品负责人/FDE前沿部署工程师｜ToB Agent、企业知识应用、业务流程智能化",
+    "en": "AI Product Lead / Forward Deployed Engineer (FDE) | ToB Agents, enterprise knowledge applications & intelligent business processes"
   },
   "industry0": {
     "zh": "电子制造",
@@ -202,12 +202,12 @@ const dictionary = {
     "en": "Hospitality"
   },
   "intro": {
-    "zh": "在德勤技术与转型团队做顾问和项目经理，从富士康的仓储系统、金赛药业的质量流程，一路做到蔡司的质量知识问答和数据查询 Agent、万豪的专家经验蒸馏 Agent。我习惯先把业务问题拆到流程、字段和规则这一层，再决定哪些交给模型、哪些交给规则和受控接口。现在想专注做 ToB 的 AI 产品：企业知识应用、Agent 和业务流程智能化。",
-    "en": "I work as a consultant and project manager in Deloitte’s Technology & Transformation team, from Foxconn’s warehouse systems and Jinsai’s quality processes to ZEISS’s quality knowledge Q&A and data query Agent, and Marriott’s expert knowledge distillation Agent. I start by breaking business problems down into processes, fields and rules, then decide what to hand over to models, rules and controlled interfaces. I now want to focus on AI products for businesses: enterprise knowledge applications, Agents and intelligent business processes."
+    "zh": "在德勤技术与转型团队做顾问和项目经理，从富士康的仓储系统、金赛药业的质量流程，一路做到蔡司的质量知识问答和数据查询 Agent、德勤资深顾问经验蒸馏与 Fit-Gap 方案初稿 Agent。我习惯先把业务问题拆到流程、字段和规则这一层，再决定哪些交给模型、哪些交给规则和受控接口。现在想专注做 ToB 的 AI 产品：企业知识应用、Agent 和业务流程智能化。",
+    "en": "I work as a consultant and project manager in Deloitte’s Technology & Transformation team, from Foxconn’s warehouse systems and Jinsai’s quality processes to ZEISS’s quality knowledge Q&A and data query Agent, and Deloitte’s senior-consultant experience distillation and Fit-Gap first-draft Agent. I start by breaking business problems down into processes, fields and rules, then decide what to hand over to models, rules and controlled interfaces. I now want to focus on AI products for businesses: enterprise knowledge applications, Agents and intelligent business processes."
   },
   "jinsai_approach": {
-    "zh": "参与制定项目主计划，跟踪进度与风险；完成业务调研、质量流程规划、系统配置、测试与落地实施。以实习生身份入项，转正后负责至项目收尾。",
-    "en": "Helped develop the project master plan and track progress and risks. Completed business research, quality process planning, system configuration, testing and implementation. Joined as an intern and continued through project close after becoming a full-time consultant."
+    "zh": "经短期带教后独立负责受 FDA 监管的质量模块，主导调研、URS 方案、配置测试、培训到上线切换全流程。",
+    "en": "After brief onboarding, independently owned the FDA-regulated quality module, leading research, URS solution design, configuration and testing, training and go-live cutover."
   },
   "jinsai_client": {
     "zh": "金赛药业",
@@ -218,56 +218,28 @@ const dictionary = {
     "en": "Biopharmaceuticals"
   },
   "jinsai_outcome": {
-    "zh": "完成从调研到落地的全链路交付（Demo 为通用 FDA/GMP 质量流程示意）。",
-    "en": "Completed delivery from research through implementation. The demo illustrates generic FDA/GMP quality processes."
+    "zh": "质量模块如期上线并满足 FDA 合规要求，系统自动计算取样量与取样 HU，实现批次级追溯。",
+    "en": "The quality module went live on schedule and met FDA compliance requirements; the system calculates sample sizes and sampling HUs automatically, enabling batch-level traceability."
   },
   "jinsai_problem": {
     "zh": "生物制药客户需要搭建符合 FDA 要求的平台，规划质量部门流程并在系统中落地。",
     "en": "A biopharmaceutical client needed a platform meeting FDA requirements, with quality department processes planned and implemented in the system."
   },
   "jinsai_role": {
-    "zh": "项目经理助理、质量模块方案及实施顾问",
-    "en": "Project manager assistant; quality module solution and implementation consultant"
+    "zh": "金赛质量模块负责人",
+    "en": "Jinsai quality module lead"
   },
   "jinsai_title": {
-    "zh": "FDA 平台搭建（质量流程）",
-    "en": "FDA platform implementation (quality processes)"
+    "zh": "企业系统实施与数据治理（金赛 FDA 质量模块）",
+    "en": "Enterprise system implementation and data governance (Jinsai FDA quality module)"
   },
   "lang_label": {
     "zh": "语言",
     "en": "Language"
   },
-  "liauto_approach": {
-    "zh": "在前端 CRM 上搭建库存查询 Agent：抽取物料、仓库、时间参数，缺参追问；校验权限后调用库存服务；数量和交期交给规则引擎与库存服务，模型不自行推算；只读，写操作一律转人工。",
-    "en": "Built an inventory query Agent on the front-end CRM. It extracts material, warehouse and time parameters, asks for missing information and checks permissions before calling inventory services. Rule engines and inventory services handle quantities and delivery dates; the model does not calculate them. Queries are read-only; write operations are handed over to people."
-  },
-  "liauto_client": {
-    "zh": "理想汽车",
-    "en": "Li Auto"
-  },
-  "liauto_industry": {
-    "zh": "汽车",
-    "en": "Automotive"
-  },
-  "liauto_outcome": {
-    "zh": "以参数与结果正确率、追问是否恰当、越权拒答、端到端成功率建立评测用例，试点收集失败原因迭代。",
-    "en": "Built evaluation cases for parameter and result correctness, appropriate clarification, refusal of unauthorized requests and end-to-end success. Collected failure reasons during the pilot to guide iteration."
-  },
-  "liauto_problem": {
-    "zh": "海外经销商和出海业务人员查车型/备件可用量、在途库存和清关状态，要在多个系统间切换或找内勤，响应慢且口径不一。",
-    "en": "Overseas dealers and business staff had to switch between systems or ask back-office staff to check vehicle and spare-parts availability, in-transit stock and customs status, leading to slow responses and inconsistent definitions."
-  },
-  "liauto_role": {
-    "zh": "流程规划与 CRM 方案顾问",
-    "en": "Process planning and CRM solution consultant"
-  },
-  "liauto_title": {
-    "zh": "出海 FOB 前端 Agent CRM",
-    "en": "Overseas FOB front-end Agent CRM"
-  },
   "marriott_approach": {
-    "zh": "七要素结构化访谈（背景、约束、备选方案、选择理由、被否掉的路线、后果、反例）→ 模型抽取案例草稿、顾问逐条校对 → 按品类、场景、客户规模、适用条件打元数据整案召回 → 生成初稿并逐条标注依据案例、关键假设和未决项 → 专家审核，修改原因回写案例库。",
-    "en": "Structured interviews cover seven elements: background, constraints, alternatives, reasons for the choice, rejected paths, consequences and counterexamples. Models extract case drafts for line-by-line consultant review. Metadata on category, scenario, client size and applicability supports retrieval of whole cases. Generated drafts identify supporting cases, key assumptions and unresolved items. Experts review drafts and feed the reasons for edits back into the case library."
+    "zh": "按流程规划、系统架构、战略、Agent 四条线拆分 10 人团队职责并按周跟踪风险，组织覆盖采购、财务、PMO、加盟酒店经营方及 CEO/COO/CIO 的二三十场访谈；统筹面向 Global CEO/CFO/CIO 的方案评审，评审范围扩大后重排计划、提前对齐各方预期。",
+    "en": "Split a 10-person team into four workstreams (process planning, system architecture, strategy and Agent) and tracked risks weekly; organized twenty to thirty interviews covering procurement, finance, PMO, franchise hotel operators and the CEO/COO/CIO. Coordinated solution reviews with the Global CEO/CFO/CIO, re-planning and aligning expectations early when the review scope expanded."
   },
   "marriott_client": {
     "zh": "万豪酒店",
@@ -278,20 +250,20 @@ const dictionary = {
     "en": "Hospitality"
   },
   "marriott_outcome": {
-    "zh": "制定初稿验收标准，达到专家认可标准的初稿才进入交付流程；先在项目组内试点。",
-    "en": "Defined acceptance criteria for first drafts; only drafts meeting expert-approved standards enter the delivery process. Piloted within the project team."
+    "zh": "四个月内交付集采战略、平台功能蓝图与分阶段实施路线图，方案通过 Global CEO/CFO/CIO 评审。",
+    "en": "Delivered the centralized procurement strategy, platform functional blueprint and phased implementation roadmap within four months; the solution passed Global CEO/CFO/CIO review."
   },
   "marriott_problem": {
-    "zh": "资深顾问陆续退休，品类策略、供应商评估和方案取舍的判断随人离开而流失；新人形成合格方案初稿周期长、返工多。",
-    "en": "As senior consultants retired, judgments about category strategies, supplier evaluation and solution trade-offs risked leaving with them. New consultants took longer to produce qualified first drafts and faced repeated rework."
+    "zh": "客户各区域、各酒店分散采购，系统与流程不统一，需输出中国区集采战略、平台蓝图与实施路线图。",
+    "en": "Regions and hotels purchased separately with inconsistent systems and processes; the client needed a China centralized procurement strategy, platform blueprint and implementation roadmap."
   },
   "marriott_role": {
     "zh": "项目经理",
     "en": "Project Manager"
   },
   "marriott_title": {
-    "zh": "采购平台规划与专家经验蒸馏 Agent",
-    "en": "Procurement platform planning and expert knowledge distillation Agent"
+    "zh": "中国区集中采购平台规划",
+    "en": "China centralized procurement platform planning"
   },
   "method0": {
     "zh": "懂行业、懂流程",
@@ -394,20 +366,16 @@ const dictionary = {
     "en": "Outcome"
   },
   "page_jinsai": {
-    "zh": "金赛药业｜FDA 平台搭建（质量流程）",
-    "en": "Jinsai Pharma | FDA platform implementation (quality processes)"
-  },
-  "page_liauto": {
-    "zh": "理想汽车｜出海 FOB 前端 Agent CRM",
-    "en": "Li Auto | Overseas FOB front-end Agent CRM"
+    "zh": "金赛药业｜企业系统实施与数据治理（FDA 质量模块）",
+    "en": "Jinsai Pharma | Enterprise system implementation and data governance (FDA quality module)"
   },
   "page_marriott": {
-    "zh": "万豪酒店｜采购平台规划与专家经验蒸馏 Agent",
-    "en": "Marriott Hotels | Procurement platform planning and expert knowledge distillation Agent"
+    "zh": "万豪酒店｜中国区集中采购平台规划",
+    "en": "Marriott Hotels | China centralized procurement platform planning"
   },
   "page_zeiss": {
-    "zh": "蔡司镜片｜质量知识问答 + 数据查询 Agent",
-    "en": "ZEISS Lenses | Quality knowledge Q&A + data query Agent"
+    "zh": "蔡司镜片｜质量知识问答与数据查询 Agent 平台",
+    "en": "ZEISS Lenses | Quality knowledge Q&A and data query Agent platform"
   },
   "pending": {
     "zh": "待 Owen 提供",
@@ -438,8 +406,8 @@ const dictionary = {
     "en": "Owen Mao"
   },
   "profile_role": {
-    "zh": "技术与转型顾问兼项目经理",
-    "en": "Technology & Transformation Consultant / Project Manager"
+    "zh": "AI产品负责人/FDE前沿部署工程师",
+    "en": "AI Product Lead / Forward Deployed Engineer (FDE)"
   },
   "projectsTitle": {
     "zh": "项目案例",
@@ -470,8 +438,8 @@ const dictionary = {
     "en": "Replay intro"
   },
   "role": {
-    "zh": "AI 产品经理",
-    "en": "AI Product Manager"
+    "zh": "AI产品负责人/FDE前沿部署工程师",
+    "en": "AI Product Lead / Forward Deployed Engineer (FDE)"
   },
   "sample": {
     "zh": "演示用示例数据",
@@ -610,16 +578,48 @@ const dictionary = {
     "en": "Quality materials were scattered across work instructions, field dictionaries, monthly reports and 8D cases, with current and older versions mixed together. Inspection lot statuses and nonconformance statistics required help from IT or key users."
   },
   "zeiss_role": {
-    "zh": "系统切换项目经理助理、质量流程与数据治理顾问",
-    "en": "Cutover project manager assistant; quality process and data governance consultant"
+    "zh": "AI 产品负责人，兼质量模块负责人，带 3 人业务小组，项目核心团队 9 人",
+    "en": "AI Product Lead and quality module lead; led a 3-person business team within a 9-person core project team"
   },
   "zeiss_title": {
-    "zh": "质量知识问答 + 数据查询 Agent",
-    "en": "Quality knowledge Q&A + data query Agent"
+    "zh": "质量知识问答与数据查询 Agent 平台",
+    "en": "Quality knowledge Q&A and data query Agent platform"
   },
   "focus": {
     "zh": "ToB Agent、企业知识应用、业务流程智能化",
     "en": "ToB Agents, enterprise knowledge applications & intelligent business processes"
+  },
+  "page_fitgap": {
+    "zh": "德勤｜资深顾问经验蒸馏与 Fit-Gap 方案初稿 Agent",
+    "en": "Deloitte | Senior-consultant experience distillation and Fit-Gap first-draft Agent"
+  },
+  "fitgap_title": {
+    "zh": "资深顾问经验蒸馏与 Fit-Gap 方案初稿 Agent",
+    "en": "Senior-consultant experience distillation and Fit-Gap first-draft Agent"
+  },
+  "fitgap_client": {
+    "zh": "德勤企业管理咨询",
+    "en": "Deloitte Consulting"
+  },
+  "fitgap_industry": {
+    "zh": "咨询（内部）",
+    "en": "Consulting (internal)"
+  },
+  "fitgap_role": {
+    "zh": "Agent 产品负责人，主导专家知识工程、诊断框架、评测体系与组织落地全流程",
+    "en": "Agent Product Lead, leading expert knowledge engineering, the diagnostic framework, the evaluation system and organizational rollout end to end"
+  },
+  "fitgap_problem": {
+    "zh": "业务流程向系统流程转化的判断长期沉淀于资深顾问个人经验，历史方案仅记录结论，新顾问需跟完约两个完整项目方可独立产出 Fit-Gap 初稿。负责搭建方案初稿 Agent，将专家判断转化为可复用、可追溯、可审改的组织能力。",
+    "en": "Judgments on turning business processes into system processes lived in senior consultants’ personal experience, and past solutions recorded only conclusions; new consultants needed to follow about two full projects before producing a Fit-Gap first draft on their own. I built a first-draft Agent that turns expert judgment into a reusable, traceable and reviewable organizational capability."
+  },
+  "fitgap_approach": {
+    "zh": "隐性知识显性化：设计背景、约束、备选、选择理由、被否路线、后果、反例七要素访谈框架，还原专家决策链；以 LLM 抽取加顾问逐字段校对双轨机制沉淀案例，严禁补写原文未出现的金额与阈值，存疑进入待确认队列，沉淀 15 个高价值案例。决策链蒸馏：采用父子分段与 Contextual Retrieval 整体召回案例与适用条件，按业务域、品类、场景类型构建元数据先过滤后检索，条件不满足仅作对照参考。三类诊断框架：定义原生支持、流程适配、增强开发三类标准，输出统一为差异清单、决策归属、前提假设、未决事项四段式，依据按内部案例、公开资料、资深顾问判断三级溯源。Skill 化封装：将出具初稿封装为标准 Skill，在 Dify 编排为问题分类、参数提取、缺参追问、知识检索、结构化生成五段链路。人机协同评审：25 份历史方案回测，LLM-as-a-Judge 初判加资深顾问逐条复核，Bad Case 按检索未命中、诊断误判、上下游影响遗漏三层归因，修改理由回写案例库并转为回归用例。",
+    "en": "Making tacit knowledge explicit: designed a seven-element interview framework (background, constraints, alternatives, reasons for the choice, rejected paths, consequences, counterexamples) to reconstruct expert decision chains; cases were captured through LLM extraction plus field-by-field consultant review, with no amounts or thresholds added beyond the source, doubtful items sent to a confirmation queue, and 15 high-value cases built up. Decision-chain distillation: parent-child chunking and Contextual Retrieval recall whole cases with their applicability conditions, filtering by business domain, category and scenario metadata before retrieval; cases whose conditions do not match are used only for comparison. Three-way diagnostic framework: defined standards for native support, process adaptation and enhancement development; output follows a four-part format (gap list, decision ownership, assumptions, open items), with evidence traced to internal cases, public sources and senior-consultant judgment. Skill packaging: packaged first-draft generation as a standard Skill, orchestrated in Dify as a five-step chain of question classification, parameter extraction, clarification for missing parameters, knowledge retrieval and structured generation. Human-AI review: backtested on 25 historical solutions with LLM-as-a-Judge first pass and line-by-line senior-consultant review; Bad Cases were attributed to retrieval misses, diagnostic errors or missed upstream/downstream impacts, and the reasons for edits were written back to the case library as regression cases."
+  },
+  "fitgap_outcome": {
+    "zh": "25 份历史方案回测中约 80% 经资深顾问判定思路可行，案例引用与未决项标注评分由 0.6 提升至 1.7（满分 2 分）；三类诊断与资深顾问终审一致率约 75%，Skill 触发准确率约 92%，累计回写修改理由约 40 条；新顾问独立产出初稿由跟完两个完整项目缩短至单份约 8 分钟出稿，由资深顾问把关。",
+    "en": "In a backtest of 25 historical solutions, senior consultants judged about 80% to be on a workable track; the score for case citations and open-item labeling rose from 0.6 to 1.7 (out of 2). Agreement between the three-way diagnosis and senior consultants’ final review was about 75%, Skill trigger accuracy about 92%, and about 40 edit reasons were written back. Producing a first draft went from following two full projects to about 8 minutes per draft, with senior-consultant review."
   }
 };
 
