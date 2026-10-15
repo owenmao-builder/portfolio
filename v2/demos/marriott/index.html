@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专家经验蒸馏助手｜项目演示</title><link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<div class="disclosure"><strong>演示用示例数据</strong><span>本页面所有数据均为虚构示例，非客户真实数据；为基于项目场景自建的演示原型</span></div>
+<header><div class="header-left"><a class="back-link" href="../../index.html">← 返回作品集</a><div class="brand"><span class="brand-icon">研</span><div>采购方案研究室<small>专家经验蒸馏助手</small></div></div></div><span class="local"><i></i> 本地模拟 · 无网络调用</span></header>
+<main>
+<section class="hero"><div><div class="eyebrow">万豪集中采购平台规划 · 简历项目场景</div><h1>让专家的判断，成为可复用的经验。</h1><p>从一次访谈，到一份有依据、可追溯、待专家审核的方案初稿。</p></div><div class="hero-note"><span>演示边界</span><b>辅助起草 · 专家拍板</b><small>节点映射仅说明设计，不代表已连接工作流平台。</small></div></section>
+<nav class="tabs" aria-label="演示流程"><button data-flow="a" class="active">甲 · 经验沉淀<span>访谈 → 校对 → 入库</span></button><button data-flow="b">乙 · 方案初稿生成<span>需求 → 召回 → 审核 → 回写</span></button><button data-flow="library">示例案例库<span>查看整案与适用边界</span></button></nav>
+<section class="demo-bar" aria-label="演示播放控制"><div><b>跟随讲稿，走完一次经验闭环</b><span id="demo-status" role="status" aria-live="polite">自动播放将从头开始，重置本轮示例；可随时暂停。</span></div><button id="autoplay" class="primary" aria-pressed="false">▶ 演示模式 / 自动播放</button><span class="keyboard-hint">← → 切换步骤</span></section>
+<div class="workspace"><aside><div class="aside-title">流程导航 <span id="progress"></span></div><ol id="steps"></ol><div class="aside-note"><b>保留判断，而不只留结论</b><p>模型负责抽取与组织；规则负责校验；顾问和专家负责确认。</p></div><button id="reset" class="text-button">重置本轮演示</button><small class="session-note">修改仅保留在当前页面，刷新即重置。</small></aside>
+<section class="work-panel" aria-label="当前步骤"><div id="stage"></div><footer id="navigation"><button id="prev" class="secondary">← 上一步</button><span id="gate"></span><button id="next" class="primary">下一步 →</button></footer></section></div>
+<p class="page-foot">依据简历中的流程设计与参考模拟资料制作 · 不展示客户内部资料、业务成效或真实验收结果</p>
+</main><div id="notice" role="status" aria-live="polite"></div>
+</body></html>

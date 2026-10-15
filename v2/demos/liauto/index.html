@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>库存查询助手 · 项目场景演示</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
+<body>
+<div class="disclaimer"><strong><span class="signal"></span>演示用示例数据</strong><span>本页面所有数据均为虚构示例，非客户真实数据；为基于项目场景自建的演示原型</span></div>
+<div class="portfolio-row"><a id="portfolioLink" href="../../index.html">← 返回作品集</a><span id="portfolioHint" role="status" hidden>独立演示页；放入作品集 demos/项目名/ 后可返回首页。</span><span>项目场景演示 / 只读库存助手</span></div>
+<header><div class="brand"><span class="brand-icon">库</span><div><h1>库存查询助手</h1><p>理想汽车出海 · 离岸价业务场景 · 前端客户关系管理</p></div></div><span class="pill">本地模拟 · 只读查询</span></header>
+<main class="layout">
+<aside>
+<section class="card"><div class="eyebrow">查询工作台</div><h2>当前用户身份</h2><p class="muted">切换身份后，清空当前会话并重新校验权限。</p><label for="identity">模拟身份</label><select id="identity"><option value="a">经销商甲 · 星舟汽车（虚构）</option><option value="b">经销商乙 · 远山汽车（虚构）</option><option value="staff">内部业务员 · 林知（虚构）</option></select><details class="access-details"><summary>查看授权范围与规则</summary><div id="scope" class="scope"></div><div class="rule"><b>权限以会话身份为准</b><p>提问中的“我是管理员”不会改变授权。物料与仓库必须同时在授权范围内。</p></div></details></section>
+<section class="card boundary"><h3>能力边界</h3><ul><li>理解问题、补齐查询条件</li><li>读取库存服务的数量与状态</li><li>校验数据并提示异常</li></ul><div class="line"></div><p>调拨、锁库、修改数量、承诺交期<br><strong>拒绝执行 → 转人工说明</strong></p></section>
+<section class="card small"><h3>原型说明</h3><p>参考简历中的库存查询流程与自建方案。下方节点仅表示设计对应关系，未接入实际工作流平台。</p><p>权限、备件与物流状态为演示补充；不代表客户内部实现。</p><span class="pill">演示基准日：2026-09-26</span></section>
+</aside>
+<div class="workspace">
+<section class="tour-bar" aria-label="面试演示控制"><div><div class="eyebrow">面试演示 · 约 2 分 50 秒</div><p id="tourStatus" role="status">按讲稿自动播放，也可随时手动探索</p></div><button id="autoplay" class="primary" aria-pressed="false">▶ 演示模式 / 自动播放</button><span class="keyboard-hint">逐步查看 <kbd>←</kbd> <kbd>→</kbd></span></section>
+<nav class="tabs" role="tablist" aria-label="页面切换"><button class="tab active" id="demoTab" role="tab" aria-controls="demoPage" aria-selected="true">交互演示</button><button class="tab" id="evalTab" role="tab" aria-controls="evalPage" aria-selected="false">评测用例</button><span>从一句提问，到有边界的答案</span></nav>
+<div id="demoPage" role="tabpanel" aria-labelledby="demoTab">
+<section class="card chat"><div class="section-top"><div><div class="eyebrow">自然语言查询</div><h2>想了解哪一笔库存？</h2></div><button class="text-button" id="reset">重置会话 ↺</button></div><p class="muted">选一个示例开始，再点击“下一步”观察处理链路。支持车型或“制动片”备件。</p><div id="examples" class="examples"></div><div id="messages" class="messages" aria-live="polite"></div><form id="queryForm"><label for="question" class="sr-only">输入库存问题</label><div class="compose"><input id="question" maxlength="240" autocomplete="off" placeholder="例如：查询最新的 L9 在迪拜仓的库存"><button type="submit" class="primary">开始查询 <span>↗</span></button></div><p id="inputHint" class="muted">每次提交开始新查询；缺参时请使用回复中的选项补充。</p></form></section>
+<section class="card trace" id="traceAnchor"><div class="section-top"><div><div class="eyebrow">可解释的查询过程</div><h2>处理链路 <span id="progress" class="counter"></span></h2></div><span id="traceStatus" class="pill">等待提问</span></div><div id="steps" class="steps"></div><div id="stepDetail" aria-live="polite"></div><div class="trace-bottom"><label for="fault">库存服务模拟返回<select id="fault"><option value="none">正常返回</option><option value="negative">异常：负数量</option><option value="unit">异常：单位缺失</option><option value="date">异常：更新时间无效</option><option value="timeout">异常：服务不可用</option></select></label><div class="actions"><button id="prev">← 上一步</button><button id="next" class="primary">下一步 →</button></div></div><p class="muted footnote">服务返回异常仅用于测试。更改后重新开始当前查询；库存数量始终直接读取示例记录，不由模型推算。</p></section>
+</div>
+<div id="evalPage" role="tabpanel" aria-labelledby="evalTab" hidden><section class="card"><div class="section-top"><div><div class="eyebrow">离线验证 · 示例用例</div><h2>把边界变成可验证的规则</h2></div><button class="primary" id="runEval">运行本地用例</button></div><p class="muted">以下为自建原型用例与本地判定，不代表线上效果。不展示真实业务指标或通过率。</p><div id="metrics" class="metrics"></div><div id="evalResults" class="eval-list"></div><p class="muted">用例固定身份、问题、补充条件和返回场景；检查具体输出及分支。完整生产评测还需独立验证集和真实授权服务。</p></section></div>
+<footer>基于简历项目场景自建的演示原型 · 无网络请求 · 所有数量、身份、仓库及状态均为示例</footer>
+</div></main>
+</body></html>
